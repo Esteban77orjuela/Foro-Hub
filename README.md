@@ -1,3 +1,5 @@
+---
+
 # Foro Hub API
 
 Foro Hub API es una aplicación desarrollada en Java con Spring Boot. Permite gestionar un foro de discusión donde los usuarios pueden crear, visualizar, actualizar y eliminar tópicos.
@@ -6,10 +8,10 @@ Foro Hub API es una aplicación desarrollada en Java con Spring Boot. Permite ge
 
 ## Características
 
-- Crear nuevos tópicos con título, mensaje, autor y curso asociado.
-- Consultar todos los tópicos o un tópico específico por su ID.
-- Actualizar la información de un tópico existente.
-- Eliminar un tópico por su ID.
+- **Crear nuevos tópicos** con título, mensaje, autor y curso asociado.
+- **Consultar** todos los tópicos o un tópico específico por su ID.
+- **Actualizar** la información de un tópico existente.
+- **Eliminar** un tópico por su ID.
 
 ---
 
@@ -26,10 +28,10 @@ Foro Hub API es una aplicación desarrollada en Java con Spring Boot. Permite ge
 
 ## Requisitos previos
 
-- Java Development Kit (JDK) 17 o superior
-- MySQL instalado y configurado
-- Insomnia o cualquier cliente REST para probar la API
-- Maven para la gestión de dependencias
+- **Java Development Kit (JDK) 17** o superior
+- **MySQL** instalado y configurado
+- **Insomnia** o cualquier cliente REST para probar la API
+- **Maven** para la gestión de dependencias
 
 ---
 
@@ -62,65 +64,76 @@ Foro Hub API es una aplicación desarrollada en Java con Spring Boot. Permite ge
 ## Endpoints de la API
 
 ### Base URL
+
 `http://localhost:8080/api/topics`
 
 ### Endpoints disponibles
 
 #### 1. **Crear un nuevo tópico**
-   - **POST** `/api/topics`
-   - **Body** (JSON):
-     ```json
-     {
-       "title": "Tema de prueba",
-       "message": "Este es un mensaje de prueba",
-       "author": "Juan Pérez",
-       "course": "Java"
-     }
-     ```
-   - **Respuesta exitosa**:
-     - Código: `201 Created`
-     - Cuerpo:
-       ```json
-       {
-         "id": 1,
-         "title": "Tema de prueba",
-         "message": "Este es un mensaje de prueba",
-         "author": "Juan Pérez",
-         "course": "Java"
-       }
-       ```
+
+- **Método**: `POST`
+- **URL**: `/api/topics`
+- **Body** (JSON):
+  ```json
+  {
+    "title": "Tema de prueba",
+    "message": "Este es un mensaje de prueba",
+    "author": "Juan Pérez",
+    "course": "Java"
+  }
+  ```
+- **Respuesta exitosa**:
+  - Código: `201 Created`
+  - Cuerpo:
+    ```json
+    {
+      "id": 1,
+      "title": "Tema de prueba",
+      "message": "Este es un mensaje de prueba",
+      "author": "Juan Pérez",
+      "course": "Java"
+    }
+    ```
 
 #### 2. **Obtener todos los tópicos**
-   - **GET** `/api/topics`
-   - **Respuesta exitosa**:
-     - Código: `200 OK`
-     - Cuerpo: Lista de tópicos en formato JSON.
+
+- **Método**: `GET`
+- **URL**: `/api/topics`
+- **Respuesta exitosa**:
+  - Código: `200 OK`
+  - Cuerpo: Lista de tópicos en formato JSON.
 
 #### 3. **Obtener un tópico por ID**
-   - **GET** `/api/topics/{id}`
-   - **Respuesta exitosa**:
-     - Código: `200 OK`
-     - Cuerpo: Tópico con el ID especificado.
+
+- **Método**: `GET`
+- **URL**: `/api/topics/{id}`
+- **Respuesta exitosa**:
+  - Código: `200 OK`
+  - Cuerpo: Tópico con el ID especificado.
 
 #### 4. **Actualizar un tópico**
-   - **PUT** `/api/topics/{id}`
-   - **Body** (JSON):
-     ```json
-     {
-       "title": "Tema actualizado",
-       "message": "Este es el mensaje actualizado",
-       "author": "Juan Pérez",
-       "course": "Java avanzado"
-     }
-     ```
-   - **Respuesta exitosa**:
-     - Código: `200 OK`
-     - Cuerpo: Tópico actualizado.
+
+- **Método**: `PUT`
+- **URL**: `/api/topics/{id}`
+- **Body** (JSON):
+  ```json
+  {
+    "title": "Tema actualizado",
+    "message": "Este es el mensaje actualizado",
+    "author": "Juan Pérez",
+    "course": "Java avanzado"
+  }
+  ```
+- **Respuesta exitosa**:
+  - Código: `200 OK`
+  - Cuerpo: Tópico actualizado.
 
 #### 5. **Eliminar un tópico**
-   - **DELETE** `/api/topics/{id}`
-   - **Respuesta exitosa**:
-     - Código: `204 No Content`
+
+- **Método**: `DELETE`
+- **URL**: `/api/topics/{id}`
+- **Respuesta exitosa**:
+  - Código: `204 No Content`
 
 ---
 
@@ -154,4 +167,7 @@ Si deseas contribuir al proyecto:
 ---
 
 ## Licencia
+
 Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para más información.
+
+---
